@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 ENV TZ=Europe/Moscow
-RUN ln -snf /ust/shate/zoneinfo/$TZ /etc/localtime && echo$TZ > /etc/timezone&&\
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo$TZ > /etc/timezone&&\
     apt update&& apt install unzip default-jdk git maven wget -y && \
     wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.16/bin/apache-tomcat-10.0.16.zip -P /root/ && \
     cd /root/ && unzip apache-tomcat-10.0.16.zip && rm -rf apache-tomcat-10.0.16.zip && \
