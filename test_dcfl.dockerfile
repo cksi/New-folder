@@ -9,5 +9,5 @@ RUN ln -snf /ust/shate/zoneinfo/$TZ /etc/localtime && echo$TZ > /etc/timezone&&\
     mv /root/boxfuse/target/*.war /root/apache-tomcat-10.0.16/webapps/hello.war && \
     rm -rf /root/boxfuse/ && apt clean
 WORKDIR /root/apache-tomcat-10.0.16/bin
-EXPOSE 8080
+EXPOSE 80
 CMD ["sh", "catalina.sh", "run"]
