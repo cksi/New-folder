@@ -12,5 +12,5 @@ RUN mvn package
 RUN cp boxfuse-sample-java-war-hello/targer/hello-1.0.war /usr/local/tomcat9/wabapps/
 
 
-EXPOSE 8080
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
